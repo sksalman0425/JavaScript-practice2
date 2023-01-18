@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>datatype</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <script>
+      const cars1 = ["Saab", "Volvo", "BMW"];
+      console.log(cars1[2]);
+        // 5 & 1 . bit wise opr. it first they convert into binary and then apply & operation
+        //0101 &
+        //0001 
+    //ans 0001 --- covert it into decimal no. and return that decimal number.
+    //JavaScript Bitwise Left by 1 positon.i.e.000000101(bz Js is 32 bits ) ---> 1010
+    // bitwise opr returns decimal o/p whereas logical opr return o/p in true/false.
+    // single &,| are bitwise opr whereas double &&,|| are logical opr whci is used for performance optimization.
+      document.getElementById("demo1").innerHTML = 5 << 1;
+    </script>
+  </body>
+</html></title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      console.log(typeof 3);
+      let cars2;
+      // cars value is undefine and it's type of is also undefined.
+      console.log("Just cars2 ", typeof cars1, cars2);
+      cars2 = ["Saab", "Volvo", "BMW"];
+
+      console.log("type of cars2 arrray is", typeof cars2);
+      const person = {
+        firstName: "Azhar",
+        lastName: "Shaikh",
+        age: 33,
+        height: 6,
+      };
+      console.log("Type of person object is", typeof person);
+      let x = 10;
+      console.log("On line 16 datatype of x is", typeof x);
+      x = "Hi";
+      console.log("On line 18 datatype of x is", typeof x);
+      x = true;
+      console.log("On line 20 datatype of x is", typeof x);
+
+      document.getElementById("demo").innerHTML =
+        typeof "" + "<br>" + typeof "John" + "<br>" + typeof "John Doe";
+    </script>
+  </body>
+</html>
