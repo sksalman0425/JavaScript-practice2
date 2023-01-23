@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+            const x = 123;
+            const xAsString = x.toString();
+            console.log(typeof xAsString);
+            console.log(typeof x);
+            const y = (234567890).toString();
+            console.log(typeof y);
+            const epsilon1 = Number.MAX_VALUE;
+            // Number.MAX_VALUE returns the largest number possible in JavaScript.
+            // Number.MAX_VALUE has the value of 1.7976931348623157e+308.
+            // Numbers larger than MAX_VALUE are represented as Infinity.
+            // Number.MIN_VALUE returns the smallest number possible in JavaScript.
+            // Number.MIN_VALUE has a value of 5e-324.
+            // MIN_VALUE is the value closest to 0.
+            // Numbers smaller than this are converted to 0.
+            // The most negative number is the negative MAX_NUMBER.
+            const epsilon2 = Number.MIN_VALUE;
+             const PI = Math.PI;
+             console.log(PI);
+            console.log(epsilon1);
+            console.log(epsilon2);
+    </script>
+  </body>
+</html>
