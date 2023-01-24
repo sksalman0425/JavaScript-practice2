@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Array Methods Example 2</h1>
+    <p id="demo"></p>
+    <script>
+      // The splice() method adds new items to an array. it does not return new array
+
+      // The slice() method slices out a piece of an array. it return new array
+      const fruits = ["Banana", "Orange", "Apple", "Mango","Banana", "Orange", "Apple", "Mango"];
+      //in splice first arg indicate at which position we have to add element(string/number/object) and 2 nd arg indicate how much element will be deleted from array
+      //   fruits.splice(2, 1, "Lemon", "Kiwi");
+      //fruits.splice(2, 0, "Lemon", "Kiwi");
+      // fruits.splice(2, 2);// 3 rd arg is optional. here from 2 nd position 2 element is remove
+      // console.log(fruits);
+      //slice return new array with removing element in existing array but exosting array is not change
+      const citrius = fruits.slice(2);
+      const citrius2 = fruits.slice(2,5);// first two element remove and other elemnt included excluding ending position/2 nd arg position
+      console.log("citrius array", citrius,citrius2);
+      document.getElementById("demo").innerHTML =
+        fruits.join(" | ") + "</br>" + citrius.join("*");
+    </script>
+  </body>
+</html>
