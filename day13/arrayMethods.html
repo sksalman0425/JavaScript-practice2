@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Methods</title>
+  </head>
+  <body>
+    <h1>Array Methods</h1>
+    <p id="demo"></p>
+    <script>
+      //  The JavaScript method toString() converts an array to a string of (comma separated) array values.
+      const fruits = ["Banana", "Orange", "Apple", "Mango"];
+      //   document.getElementById("demo").innerHTML = fruits.toString();
+      // The join() method also joins all array elements into a string.
+      // It behaves just like toString(), but in addition you can specify the separator:
+      // document.getElementById("demo").innerHTML = fruits.join();
+      //document.getElementById("demo").innerHTML = fruits.join(" ' ");
+      fruits.pop(); // it remove last element from array
+      // document.getElementById("demo").innerHTML = fruits.join(" ' ");
+      fruits.push("Dragon Fruit"); // it Add  element at the last end of array
+      // document.getElementById("demo").innerHTML = fruits.join(" ' ");
+      // fruits.pop();
+      // fruits.pop();
+      //document.getElementById("demo").innerHTML = fruits.join(" ' ");
+      //fruits.shift(); //it is similiar to pop. it remove first element from array and according to that change it's index
+      //   document.getElementById("demo").innerHTML = fruits.join(" ' ");
+      //fruits.unshift("Lemon"); // it is similiar to push. it add new element to array and changed their index accordingly
+      //   document.getElementById("demo").innerHTML = fruits.join(" ' ");
+      // console.log("fruits", fruits);
+      // fruits[0] = "Kiwi"; //it change fruits array at index 0 and add kiwi there
+      //console.log("fruits", fruits);
+      // console.log("Array Length ::", fruits.length);// length is method of array that gives length of array
+      // fruits[10] = "XYZ";//index 10 XYZ added
+      //  console.log("fruits", fruits);
+      // delete fruits[10];// it remove element at 10th index but it leave hole in the array bz it does not shift array.
+      // console.log("fruits", fruits);
+      // fruits[fruits.length] = "Dragon Fruit";// it add element at last index but not good practice
+      //  console.log("fruits", fruits);
+      //   fruits.push("Dragon Fruit")
+
+      const myGirls = ["Cecilie", "Lone"];
+      const myBoys = ["Emil", "Tobias", "Linus"];
+      const arr3 = ["Robin", "Morgan"];
+
+      const myChildren = myBoys.concat(
+        myGirls,
+        arr3,
+        fruits,
+        "New String as salman"
+      );
+      console.log("childeren array", myChildren);
+      document.getElementById("demo").innerHTML = myChildren.join(" | ");
+    </script>
+  </body>
+</html>
