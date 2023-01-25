@@ -21,7 +21,7 @@
       const paragraphNumElement = document.getElementById("numId");
       console.log("paragraphNumElement", paragraphNumElement);
       const inputNumberElement = document.getElementById("numInputId");
-      inputNumberElement.value = 0;
+      inputNumberElement.value = 0;// it's value after page load
       console.log("inputNumberElement", inputNumberElement);
       const fruitInputElement = document.getElementById("fruitInputId");
       const fruitsParagraphElement = document.getElementById("fruitsId");
@@ -29,10 +29,11 @@
         //block code
         console.log("Value of input box", inputNumberElement.value);
         numbersArray.push(Number(inputNumberElement.value));
+        // in Argument we make Anonymous function which self invoking
         numbersArray.sort(function (a, b) {
-          return b - a;
+          return a - b;
         });
-        // numbersArray.reverse();
+        // numbersArray.reverse();// complexsity will increases when we used reverse after asending or desending order
         paragraphNumElement.innerHTML = numbersArray.join("|");
       }
 
@@ -41,8 +42,8 @@
       //   }
       function onAddFruitsClicked() {
         fruits.push(fruitInputElement.value);
-        fruits.sort();
-        fruits.reverse();
+        fruits.sort();// for string sort() sort them in asending order
+        // fruits.reverse();// it reverse asending order string array into desending order
         fruitsParagraphElement.innerHTML = fruits.join(" | ");
       }
     </script>
