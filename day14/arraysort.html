@@ -21,7 +21,7 @@
       const paragraphNumElement = document.getElementById("numId");
       console.log("paragraphNumElement", paragraphNumElement);
       const inputNumberElement = document.getElementById("numInputId");
-      inputNumberElement.value = 0;// it's value after page load
+      inputNumberElement.value = 0; // it's value after page load
       console.log("inputNumberElement", inputNumberElement);
       const fruitInputElement = document.getElementById("fruitInputId");
       const fruitsParagraphElement = document.getElementById("fruitsId");
@@ -29,7 +29,16 @@
         //block code
         console.log("Value of input box", inputNumberElement.value);
         numbersArray.push(Number(inputNumberElement.value));
-        // in Argument we make Anonymous function which self invoking
+        // By default, the sort() function sorts values as strings.
+
+        // This works well for strings ("Apple" comes before "Banana").
+
+        // However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+        // Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+        // You can fix this by providing a compare function:
+        // in Argument we make Anonymous function i.e.(function(a, b){return b - a}) which self invoking/callback function
         numbersArray.sort(function (a, b) {
           return a - b;
         });
@@ -42,7 +51,7 @@
       //   }
       function onAddFruitsClicked() {
         fruits.push(fruitInputElement.value);
-        fruits.sort();// for string sort() sort them in asending order
+        fruits.sort(); // for string sort() sort them in asending order
         // fruits.reverse();// it reverse asending order string array into desending order
         fruitsParagraphElement.innerHTML = fruits.join(" | ");
       }
