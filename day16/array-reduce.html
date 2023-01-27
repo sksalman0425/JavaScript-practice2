@@ -11,6 +11,34 @@
     <p id="sum"></p>
     <script>
       const numbers = [45, 4, 9, 16, 25];
+      // here 1st argument  is used as Anounymous function...
+
+      // const sum = numbers.reduce(function (accumulator, value, index, array) {
+      //   console.log(accumulator, value, index, array);
+      //   return accumulator + value;
+      // });
+
+      //OR----------------------------------
+
+      //when we give initial value in 2nd arg then index start with 0th position if not then it start with 1st position.
+
+      // const sum = numbers.reduce(function (accumulator, value, index, array) {
+      //   console.log(accumulator, value, index, array);
+      //   return accumulator + value;
+      // }, 0);
+      // console.log("Sum of array elemets is ::", sum);
+      // here generateSum is used as callback function
+      // const sum2=numbers.reduce(generateSum);
+      // console.log("original array and SUM2 array is ::",numbers,sum2);
+      //below we have given manually initial value as 0.
+      // const sum3 = numbers.reduce(generateSum, 0);
+      //   console.log("Sum3 of array elemets is ::", sum3);
+      // here generateSum is used as callback function
+      // function generateSum(accumulator, value, index, array) {
+      //   console.log(accumulator, value, index, array);
+      //   return accumulator + value;
+      // }
+
       const sum = numbers.reduce(function (
         previousValue,
         currentValue,
@@ -21,11 +49,11 @@
         return previousValue + currentValue;
       },
       0);
-      //   const sum = numbers.reduce(function (accumulator, value, index, array) {
-      //     console.log(accumulator, value, index, array);
-      //     return accumulator + value;
-      //   }, 0);
-      console.log("Sum of array elemets is ::", sum);
+      document.getElementById("demo").innerHTML =
+        "Given Array:" + numbers.join(",");
+      document.getElementById("sum").innerHTML =
+        "The sum of above array is::" + sum;
+      //Flatten the array example/merging the arrays into single array
       var rows = [
         [2, 3, 5],
         [1, 2, 4],
@@ -36,17 +64,6 @@
         return prev.concat(current);
       });
       console.log("matrixElements", matrixElements);
-      //   const sum = numbers.reduce(generateSum, 0);
-      //   console.log("Sum of array elemets is ::", sum);
-
-      //   function generateSum(accumulator, value, index, array) {
-      //     console.log(accumulator, value, index, array);
-      //     return accumulator + value;
-      //   }
-      document.getElementById("demo").innerHTML =
-        "Given Array:" + numbers.join(",");
-      document.getElementById("sum").innerHTML =
-        "The sum of above array is::" + sum;
     </script>
   </body>
 </html>

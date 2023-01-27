@@ -14,7 +14,12 @@
       numArray.forEach(myFunction);
 
       function myFunction(x, y, z) {
-        //lock of code. we can neglect 2nd and 3 rd argument.
+        // Above myFunction is callback/self-invoking function, so no need to give () after it's name. we can neglect 2nd and 3 rd argument.
+        //or we can write self-invoking/call back function without name as given below
+        // numArray.forEach(function (x, y, z){
+        //   console.log("Value::", x, "index", y, "array entire", z);
+        // txt += " | " + x; 
+        // });
         console.log("Value::", x, "index", y, "array entire", z);
         txt += " | " + x;
       }

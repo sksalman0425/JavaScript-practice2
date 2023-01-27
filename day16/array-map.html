@@ -7,21 +7,24 @@
     <title>Document</title>
   </head>
   <body>
-    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
     <script>
       const numbers1 = [3, 6, 74, 8, 4, 4, 8, 9];
       let txt = "";
       const numbers2 = numbers1.map(myFunction);
       function myFunction(value, i) {
-        console.log("value", value, i);
-        txt += "|" + 2 * value;
+        //console.log("value", value, i);
+        txt += "|" + 2 * value;//here we appending array value in txt variable.
         console.log("txt", txt);
 
         return 2 * value;
       }
-      console.log("numbers1::", numbers1);
-      console.log("numbers2::", numbers2);
-      document.getElementById("demo").innerHTML = txt.slice(1);
+      //when map() used new-array.length=old-array.length
+      console.log("numbers1::", numbers1);// existing array is not changed
+      console.log("numbers2::", numbers2);//new array created with modification
+      document.getElementById("demo1").innerHTML = txt;
+      document.getElementById("demo2").innerHTML = txt.slice(1);//remove first element from array
     </script>
   </body>
 </html>
