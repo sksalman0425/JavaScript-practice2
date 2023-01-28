@@ -7,35 +7,54 @@
     <title>Array Methods</title>
   </head>
   <body>
-    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
     <script>
       const numbers = [45, 4, 9, 16, 25];
-      const allOver18 = numbers.every(function (value) {
-        console.log("this is in every method", value);
-        return value > 18;
-      });
-      console.log("The all over 18 is ::", allOver18);
-      document.getElementById("demo").innerHTML =
-        "All over 18 is :" + allOver18;
-
+      //   const allOver18 = numbers.every(function (value) {
+      //     console.log("this is in every method", value);
+      //     return value > 18;
+      //   });
+      //   console.log("The all over 18 is ::", allOver18);
+      //   document.getElementById("demo1").innerHTML =
+      //     "All over 18 is :" + allOver18;
+      // The indexOf() method searches an array for an element value and returns its position.
+      // Note: The first item has position 0, the second item has position 1, and so on. if element not found it return -1.
+      //Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+      //   const fruits1 = "An Apple a day keep doctor away";
+      //   let position1 = fruits1.indexOf("App");
+      //   const fruits2 = ["Apple", "Orange", "Apple", "Mango"];
+      //   let position2 = fruits2.indexOf("Apple");
+      //   let position3 = fruits2.indexOf("App");
+      //   document.getElementById("demo2").innerHTML =
+      //     "App is found in position in string  " +
+      //     position1 +
+      //     " Apple is found in position in Array" +
+      //     position2 +
+      //     "App can not found in position in array" +
+      //     position3;
       const alphabets = "ABCDEF";
       const arrayAlphabets = Array.from(alphabets);
-      console.log("arrayAlphabets", arrayAlphabets);
+      //Array is inbuilt method and by using Array.from() method we convert string into array
+      console.log("array of the Alphabets", arrayAlphabets);
       const data = [-10, -11, -14, 6, 8, 7, 4];
+      // const array element we can change
       data[0] = 78;
       data.push(98);
       const person = { name: "Azhar", age: 35 };
       console.log(typeof person);
+      // for sorting number array in asending order we have to use compare function.
       data.sort(function (a, b) {
         return a - b;
       });
       console.log("Type of Array::", typeof data, data);
+      //isArray() return true if we passes array and return false if it is object
       console.log(Array.isArray(data));
       console.log(Array.isArray(person));
-      const str = "Hi"; // string
-      const srt1 = new String("Hi"); // object
+      const str = "Hi"; // str datatype is string
+      const srt1 = new String("Hi"); //str1 datatype is object. anything start with new keyword then it object.
 
-      //   typeof [5,6,7]
+      console.log(typeof [5, 6, 7]); // datatype of array is object
     </script>
   </body>
 </html>

@@ -8,11 +8,26 @@
     <script></script>
   </head>
   <body>
-    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3">
+      when your website work for whole world then you can use UTC(universal Time
+      Zone) zone.In UTC it automatically get your browser time zone and store in
+      DB. In india IST (Indian Standerd Time) zone is used.
+      Date objects are created with the new Date() constructor.
+      JavaScript counts months from 0 to 11:January = 0.December = 11.
+      JavaScript Date Input
+      There are generally 3 types of JavaScript date input formats:
+      The ISO format follows a strict standard in JavaScript.
+      Normally Moment.js library included to perform various opertion related to date.
+    </p>
     <script>
       const d = new Date();
-    //   d.
-      document.getElementById("demo").innerHTML = d.toUTCString();
+      // Date objects are static. The "clock" is not "running".
+
+      //The computer clock is ticking, date objects are not.
+      document.getElementById("demo1").innerHTML = d;
+      document.getElementById("demo2").innerHTML = d.toUTCString(); //it is 5.30 backward than indian time.
     </script>
   </body>
 </html>
