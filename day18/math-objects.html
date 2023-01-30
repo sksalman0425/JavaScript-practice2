@@ -9,6 +9,7 @@
 <body>
     <p id="demo1"></p>
     <script>
+        //for flatten the arrays into single array
         const numbers=[3,4,2,5,[12,3,5,[2],5],44,55,22];
         const newFlatten1=Array.prototype.concat.apply([],numbers);
         console.log("newFlatten array is ::",newFlatten1);//it shows deep level 1
