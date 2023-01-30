@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math objects</title>
+</head>
+<body>
+    <p id="demo1"></p>
+    <script>
+        const numbers=[3,4,2,5,[12,3,5,[2],5],44,55,22];
+        const newFlatten1=Array.prototype.concat.apply([],numbers);
+        console.log("newFlatten array is ::",newFlatten1);//it shows deep level 1
+        document.getElementById("demo1").innerHTML=newFlatten1;
+        const newFlatten2=numbers.flat();// deep level 1
+        console.log("newFlatten array is ::",newFlatten2);
+        const newFlatten3=numbers.flat(2);// deep level 2 similiarly for deep level 3 write flat(3)
+        console.log("newFlatten array is ::",newFlatten3);
+    </script>
+    
+</body>
+</html>
