@@ -7,8 +7,10 @@
     <title>Math objects</title>
 </head>
 <body>
+    <p id="demo"></p>
     <p id="demo1"></p>
     <script>
+
         //for flatten the arrays into single array
         const numbers=[3,4,2,5,[12,3,5,[2],5],44,55,22];
         const newFlatten1=Array.prototype.concat.apply([],numbers);
@@ -18,6 +20,23 @@
         console.log("newFlatten array is ::",newFlatten2);
         const newFlatten3=numbers.flat(2);// deep level 2 similiarly for deep level 3 write flat(3)
         console.log("newFlatten array is ::",newFlatten3);
+
+      //   document.getElementById("demo").innerHTML = Math.ceil(4.9);
+      const numbers2 = [0, 150, 30, 20, -8, -200];
+      //   const newFlatten = Array.prototype.concat.apply([], numbers2);
+      //   //   const newFlatten = numbers2.flat(2);
+      //   console.log("newFlatten", newFlatten);
+      //   document.getElementById("demo").innerHTML = Array.prototype.concat.apply(
+      //     [],
+      //     numbers2
+      //   );
+      //   document.getElementById("demo").innerHTML = Math.min(34, 56, 35);
+      //   Math.max.apply(null, numbers2);
+      // 0-10 ----round
+      // 0-9 ----floor
+      // 1-10 ---ceil
+      const randomValue = Math.random();
+      document.getElementById("demo").innerHTML = Math.ceil(randomValue * 10);
     </script>
     
 </body>
