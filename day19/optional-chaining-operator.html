@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>optional-chaining-operator</title>
+  </head>
+  <body>
+    <p>The ?. operator returns undefined if an object is undefined or null (instead of throwing an error).</p>
+    <p id="demo"></p>
+    <script>
+      // Create an object:
+      const car = { type: "Fiat", model: "500", color: "white" };
+      let name = car?.name;
+      // Ask for car name which is not present in car object:
+      console.log(car?.name);
+      document.getElementById("demo").innerHTML = car?.name;
+    </script>
+  </body>
+</html>
