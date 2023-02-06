@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+
+    <script>
+        let text1="";
+      //below cars is a array and it for of loop we do not need key/property of iterable object to access it's value.
+      const cars = ["BMW", "Volvo", "Saab", "Ford"];
+      for (const iterator of cars) {
+        console.log("iterator", iterator);
+        text1 +=iterator +"<br/>"
+      }
+      document.getElementById("demo1").innerHTML = text1;
+
+    //   const person = { fname: "John", lname: "Doe", age: 25, height: 6 };
+    //       for (const i of person) {
+    //           console.log("iterator2",i);
+    //      }
+
+      let language = "JavaScript";
+      let text2 = "";
+      for (let x of language) {
+        text2 += x + "<br>";
+      }
+
+      document.getElementById("demo2").innerHTML = text2;
+    </script>
+  </body>
+</html>

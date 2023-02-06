@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+
+
+      const cars1 = ["Maruti", "Renault", "BMW"];
+      let text1 = "";
+      let i = 0; // initialization
+      // condition check
+      while (i < cars1.length) {
+        text1 += cars1[i] + "</br>"; // block of code
+        console.log("I am true", i); // block of code
+        i++; // increment
+      }
+
+
+
+      const cars2 = ["BMW", "Volvo", "Saab", "Ford"];
+      let j = 0;
+      let text2 = "";
+
+      while (cars2[j]) {
+        text2 += cars2[j] +"<br/>";
+        j++;
+      }
+    // in for loop all three expresion are optional and we can defined at diff places.
+    // below we can use for loop as while loop..
+    //   for (; cars2[j]; ) {
+    //     text2 += cars2[j] +"<br/>";
+    //     j++;
+    //   }
+
+      document.getElementById("demo1").innerHTML = text1;
+      document.getElementById("demo2").innerHTML = text2;
+    </script>
+  </body>
+</html>
