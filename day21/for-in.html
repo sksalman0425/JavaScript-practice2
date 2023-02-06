@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      const person = { fname: "John", lname: "Doe", age: 25, height: 6 };
+
+      let text = "";
+      // when object .i.e.person is given then we can access it through below two ways
+      //   person["fname"] 1st way
+      //   person.fname   2nd way
+      //The JavaScript for in statement loops through the properties of an Object:
+      for (const x in person) {
+        console.log("x::: is:::", x);
+        text += person[x] + "</br>";
+      }
+      //   for (const key in person) {
+      //     //here we add if condition to check object has property or not
+      //     if (Object.hasOwnProperty.call(person, key)) {
+      //     const element = person[key];
+      //     text += key + ":" + element + "</br>";
+      //     }
+      //   }
+      // in case of array it takes index as their key and their value as value
+      const arr = [1, 2, 3, 4, 5, 6];
+      for (let key in arr) {
+        console.log(key, arr[key]);
+      }
+      //in case of string it takes each alphabet as value and their index as key
+      const text3 = "Azhar";
+      for (let key in text3) {
+        console.log(key, text3[key]);
+      }
+      const person2 = { lname: "Shaikh", fname: "Azhar" };
+      //   // using for...in loop
+      for (let key in person2) {
+        console.log(key, person2[key]);
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
