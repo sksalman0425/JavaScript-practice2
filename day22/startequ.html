@@ -20,11 +20,11 @@
           string += "*";
         }
         // newline after each row
-        string += "\n";
+        string += "<br>";
       }
       // printing the string
-      console.log(string);
-      
+      //console.log(string);//used "\n" instead of <br> then it display square in console
+      document.getElementById("demo").innerHTML=string;
     </script>
   </body>
 </html>
