@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Continue Statement</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      let text = "";
+      for (let i = 0; i < 10; i++) {
+        if (i > 3 && i < 6) {
+          continue;//here we skipping 4 and 5 iteration. it will skip further code of for loop
+        }
+        console.log("Hi", i);
+        text += "The number is " + i + "</br>";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
