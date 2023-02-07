@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sets and Maps</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p id="demo5"></p>
+    <h1>Sets is a collection of unique value</h1>
+    <script>
+      const numbers = [1, 3, 4, 2, 5, 3, 2, 5, 6, 8, 9];
+      const uniquenumbers1 = new Set(numbers); // set is a object
+      console.log("uniquenumbers1", uniquenumbers1);
+      console.log("uniquenumbers1", typeof uniquenumbers1); // uniquenumbers1 is object
+      //uniquenumber array stored only unique value of array because we are using Set collection
+      //Datatype of variable uniquenumber is Set of number, and we do not directly log Set of Number.
+      // uniquenumbers1.forEach((value)=>console.log(value));
+      // OR-------------------------------------------
+      // we can use spread operator as
+      const uniquenumbers2 = [...new Set(numbers)]; // here set(object) is converted into array using spread opr
+      // datatype of uniquenumbers is array of numbers.
+      console.log("uniquenumbers2", uniquenumbers2);
+      console.log("uniquenumbers2", typeof uniquenumbers2); //uniquenumbers2 is array
+      //letters array stored only unique value of array because we are using Set collection
+      //Datatype of variable uniquenumber is Set of string, and we do not directly log Set of Number.
+      const letters = new Set(["a", "b", "c", "d", "c"]);
+
+      letters.forEach((value) => console.log(value));
+      letters.add("z");
+      letters.delete("d");
+      let text = "";
+
+      // for (const x in letters.value()) {
+      //     text +=x+"<br/>";
+      // }
+      //in set we use for of loop because in Set only values are present not their properties
+      for (const x of letters.values()) {
+        text += x + "<br/>";
+      }
+      document.getElementById("demo").innerHTML = text;
+
+      const fruits = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+        [100, 501],
+        [null, 301],
+        [, 201],
+      ]);
+      fruits.set("apples", 2000); // it add new key or override existing key i.e. apples
+      fruits.set("grapes", 111);
+      //document.getElementById("demo2").innerHTML = fruits.get("apples");
+      //document.getElementById("demo2").innerHTML =fruits.has("apples");
+      document.getElementById("demo2").innerHTML = fruits.size;
+      // Delete an Element based on keys present in Map
+      // fruits.delete("apples");
+      // fruits.delete(null);
+      // fruits.delete();
+
+      document.getElementById("demo3").innerHTML = fruits.has("apples");
+      text2 = "";
+      for (const x of fruits.entries()) {
+        text2 += x + "<br/>";
+      }
+      document.getElementById("demo4").innerHTML = text2;
+      
+      //The instanceof Operator only apply on object and it returns true or false
+
+      const cars = ["Saab", "Volvo", "BMW"];
+
+      document.getElementById("demo5").innerHTML =
+        Array.isArray(cars)+"<br>"+
+        (cars instanceof Array) +
+        "<br>" +
+        (cars instanceof Object) +
+        "<br>" +
+        (cars instanceof String) +
+        "<br>" +
+        (cars instanceof Number);
+    </script>
+  </body>
+</html>
