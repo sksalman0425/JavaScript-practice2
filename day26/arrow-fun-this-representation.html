@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>JavaScript "this"</h1>
+
+<p style="color:brown">This example demonstrate that in Arrow Functions, the "this" keyword represents the object that owns the function, no matter who calls the function.</p>
+
+<p>Click the button to execute the "hello" function again, and you will see that "this" still  represents the window object.</p>
+
+<button id="btn">Click Me!</button>
+
+<p id="demo"></p>
+
+<script>
+const obj1={
+ fname:"salman",
+ lname:"shaikh",
+
+hello: () => {
+  document.getElementById("demo").innerHTML += this;
+}
+}
+//The window object calls the function during page loading:
+window.addEventListener("load", obj1.hello);
+
+//A button object calls the function after button click:
+document.getElementById("btn").addEventListener("click", obj1.hello);
+</script>
+
+</body>
+</html>
