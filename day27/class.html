@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <script>
+      class Vehicle {
+        constructor() {}
+        color(x) {
+          return x;
+        }
+      }
+      class Car extends Vehicle {
+        constructor(n, y) {
+          //block of code
+          // when we extend the class then we have to initailised extends class constructor by using super() method.
+          super();
+          this.name = n;
+          this.year = y;
+        }
+        age(currentyear) {
+          return currentyear - this.year;
+        }
+      }
+
+      const car1 = new Car("Tata", 2016);
+      const car2 = new Car("Renault", 2002);
+      //we are creating Date object outside class because outside the class it creat only one time.
+      //if we are creating Date() in the class then it created whenever we create object of class. so for two object it create 2 times. so redundancy occurs
+      //here we are creating date object.
+      const currentDate = new Date();
+      //here by using getFullYear() of Date() we are getting current year
+      const currentYear = currentDate.getFullYear();
+      document.getElementById("demo").innerHTML =
+        car1.name +
+        "</br>" +
+        car1.year +
+        "</br>" +
+        "Age of Car1::" +
+        car1.age(currentYear) +
+        "</br>" +
+        car1.color("Red") +
+        "</br>" +
+        car2.name +
+        "</br>" +
+        car2.year +
+        "</br>" +
+        "Age of Car2::" +
+        car2.age(currentYear)+
+        "</br>" +
+        car1.color("Green");
+
+      //   document.getElementById()
+      //   console.log(new Number());
+    </script>
+  </body>
+</html>
