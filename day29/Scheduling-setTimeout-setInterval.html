@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scheduling: setTimeout and setInterval</title>
+  </head>
+  <body>
+    <h1>Scheduling: setTimeout and setInterval</h1>
+    <p>
+      We may decide to execute a function not right now, but at a certain time
+      later. That's called “scheduling a call”.<br />
+      There are two methods for it:<br />
+
+      1. setTimeout allows us to run a function once after the interval of
+      time.<br />
+      2. setInterval allows us to run a function repeatedly, starting after the
+      interval of time, then repeating continuously at that interval.<br />
+    </p>
+
+    <button onclick="handleAfterOnclick()">Display no. after 10 sec</button>
+    <button onclick="handleAfterEveryOnclick()">
+      Display no. after every 1 sec
+    </button>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+      function handleAfterOnclick() {
+        let timeoutId = setTimeout(() => {
+          document.getElementById("demo1").innerHTML =
+            "After 10 sec setTimeOut() executed";
+        }, 10000);
+      }
+      // clearTimeout() is similiar to clearInterval().
+      //here if we used cleartimeout() then setTimeout will not execute after 10 sec because before 10 sec it clear Timeout data
+      // normal used in api timeout when request get more time
+      // clearTimeout(timeoutId);
+
+      let timerId;
+      function handleAfterEveryOnclick() {
+        let count = 0;
+        //clearInterval() is inbuilt JS function which clear multiple instances of setInterval if button click multiple times.
+        clearInterval(timerId);
+        timerId = setInterval(() => {
+          document.getElementById("demo2").innerHTML = count++;
+          // by using below code, after 10 sec timerId clear i.e. counting stop.
+          // but here after every count increment it chack condition due to which it takes more time. so 2 nd method is good.
+          // if(count===10){
+          //     clearInterval(timerId);
+          // }
+        }, 1000);
+        // by using below code, after 10 sec timerId clear i.e. counting stop.
+        setTimeout(() => {
+          clearInterval(timerId);
+        }, 10000);
+      }
+    </script>
+  </body>
+</html>
