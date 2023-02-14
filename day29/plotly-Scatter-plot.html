@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>plotly-Scatter-plot</title>
+    <!-- below link for plotly library which in online  -->
+    <!-- <script src="https://cdn.plot.ly/plotly-2.18.0.min.js"></script> -->
+    <!-- below link for downloaded plotly.js which is present in day29 folder -->
+    <script src="./plotly-2.18.0.min.js"></script>
+  </head>
+  <body>
+    <p>
+      Plotly JavaScript Open Source Graphing Library. <br />
+      Plotly.js is a JavaScript charting library that comes with over 40 chart
+      types, 3D charts, statistical graphs, and SVG maps.
+    </p>
+    <div id="myPlot1" style="width: 45%"></div>
+    <div id="myPlot2" style="width: 45%"></div>
+    <div id="myPlot3" style="width: 45%"></div>
+    <div id="myPlot4" style="width: 45%"></div>
+
+    <script>
+      //-------------------------Scatter Plots-----------------------------------
+      var xArray1 = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+      var yArray1 = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+      // Define Data
+      var scatterData = [
+        {
+          x: xArray1,
+          y: yArray1,
+          mode: "markers",
+        },
+      ];
+
+      // Define Layout
+      var scatterlayout = {
+        xaxis: { range: [40, 160], title: "Square Meters" },
+        yaxis: { range: [5, 16], title: "Price in Millions" },
+        title: "House Prices vs. Size",
+      };
+
+      // Display using Plotly
+      Plotly.newPlot("myPlot1", scatterData, scatterlayout);
+
+      // ------------------------------------Line Graphs---------------------------------
+      var xArray2 = [50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150];
+      var yArray2 = [7, 8, 8, 9, 9, 9, 10, 11, 14, 14, 15];
+
+      // Define Data
+      var lineGraphsData = [
+        {
+          x: xArray2,
+          y: yArray2,
+          mode: "lines",
+        },
+      ];
+
+      // Define Layout
+      var lineGraphslayout = {
+        xaxis: { range: [40, 160], title: "Square Meters" },
+        yaxis: { range: [5, 16], title: "Price in Millions" },
+        title: "House Prices vs. Size",
+      };
+
+      // Display using Plotly
+      Plotly.newPlot("myPlot2", lineGraphsData, lineGraphslayout);
+      //-----------------------------------Bar Charts------------------------------
+      var xArray3 = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yArray3 = [55, 49, 44, 24, 15];
+
+      var barChartData = [
+        {
+          x: xArray3,
+          y: yArray3,
+          type: "bar",
+        },
+      ];
+      var barChartlayout = { title: "World Wide Wine Production" };
+
+      Plotly.newPlot("myPlot3", barChartData, barChartlayout);
+      //----------------------------Pie Charts-----------------------
+      //To display a pie instead of bars, change x and y to labels and values, and change the type to "pie":
+      var xArray4 = ["Italy", "France", "Spain", "USA", "Argentina"];
+      var yArray4 = [55, 49, 44, 24, 15];
+
+      var pieChartlayout = { title: "World Wide Wine Production" };
+
+      var pieChartData = [{ labels: xArray4, values: yArray4, type: "pie" }];
+
+      Plotly.newPlot("myPlot4", pieChartData, pieChartlayout);
+    </script>
+  </body>
+</html>
