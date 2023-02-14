@@ -43,7 +43,9 @@
       function handleAfterEveryOnclick() {
         let count = 0;
         //clearInterval() is inbuilt JS function which clear multiple instances of setInterval if button click multiple times.
+        console.log("timerId",timerId);
         clearInterval(timerId);
+        console.log("timerId",timerId,count);
         timerId = setInterval(() => {
           document.getElementById("demo2").innerHTML = count++;
           // by using below code, after 10 sec timerId clear i.e. counting stop.

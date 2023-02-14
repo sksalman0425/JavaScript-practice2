@@ -20,17 +20,22 @@
       const paraElement = document.getElementById("demo1");
       function onStartclick() {
         clearInterval(timerId); //it stop creating multiple instances
+        console.log("timerId in start",timerId);
         timerId = setInterval(() => {
           paraElement.innerHTML = count++;
         }, 1000);
       }
       function onPauseclick() {
+        console.log("timerId in pause",timerId);
         clearInterval(timerId);
+        
       }
       function onResetclick() {
         paraElement.innerHTML = "";
         count = 0;
+        console.log("timerId in reset",timerId);
         clearInterval(timerId);
+        
       }
     </script>
   </body>
